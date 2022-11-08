@@ -14,7 +14,7 @@ public class Main {
         var weightDifferenceThree = boxerWeightTwo % boxerWeightOne;
         System.out.println("Разница в весе (остаток от деления) составляет " + weightDifferenceThree + "кг.");
 
-        var totalOperatingHours = 640;
+        var totalOperatingHours = 640.0;
         var timePerWorker = 8;
         System.out.println("Общее рабочее время " + totalOperatingHours + " часов, а рабочее время одного работника " + timePerWorker + " часов.");
         var amountOfWorkers = totalOperatingHours / timePerWorker;
@@ -23,6 +23,16 @@ public class Main {
         var timePerWorkerTwo = 8;
         var totalOperatingHoursTwo = amountOfWorkersTwo * timePerWorkerTwo;
         System.out.println("Если в компании работает " + amountOfWorkersTwo + " человека, то всего " + totalOperatingHoursTwo + " часа работы может быть поделено между сотрудниками.");
+        System.out.println("Либо второе решение:");
+        var timePerWorkerThree = totalOperatingHours / amountOfWorkersTwo;
+        var minutes = 60.0;
+        var minutesResult = timePerWorkerThree - 3.0;
+        var hourResult = timePerWorkerThree - 0.68;
+        String hourResultOne = String.format("%.0f",hourResult);
+        var interestPerMinute = minutesResult * minutes;
+        String interestPerMinuteOne = String.format("%.0f",interestPerMinute);
+        System.out.println("Если в компании работает " + amountOfWorkersTwo + " человека, то всего "  + hourResultOne + ":" + interestPerMinuteOne + " часа работы может быть поделено между сотрудниками.");
+
 
 
     }
